@@ -1,0 +1,41 @@
+.input{
+  width:100%;
+}
+
+.input-group{
+  width:500px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.input-group .form-control{
+  color:#b6d540;
+}
+
+::-webkit-input-placeholder {
+  color:#b6d540;
+}
+
+.input-group .btn-green-1 {
+  background-color: #407772;
+  border: #407772;
+}
+
+.input-group .btn-green-1:focus{
+  border: 0 none;
+  outline: 0;
+  background-color: #407772;
+  box-shadow:none !important;
+}
+
+.input-group .btn-green {
+  background-color: #407772d1;
+  border: #407772;
+}
+
+.input-group .btn-green:focus{
+  border: 0 none;
+  outline: 0;
+  background-color: #407772d1;
+  box-shadow:none !important;
+}

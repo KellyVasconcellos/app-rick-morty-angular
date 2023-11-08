@@ -19,6 +19,7 @@ header {
   align-items: center;
   height: 80px;
   position: fixed;
+  // top: 0;
   background-color:rgb(15 58 64);
   @include padding-grid(0, 60px, 0, 60px);
   z-index:1;

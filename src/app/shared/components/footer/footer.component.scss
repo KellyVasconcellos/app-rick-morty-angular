@@ -1,7 +1,7 @@
 @import "../../../../styles.scss";
 
-
 footer {
+  width: 100%;
   background-color:rgb(15 58 64);
   color: #b6d540;
   @include padding-grid(0, 60px, 0, 60px);
