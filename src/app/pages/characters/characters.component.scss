@@ -16,6 +16,23 @@ main{
 
 .body-section {
   width: 100%;
-
+  display: flex;
+  padding: 220px 100px 50px 100px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
+@media (max-width: 768px) {
+
+  .search-section{
+    margin-top: 100px;
+  }
+
+  .body-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 250px;
+  }
+}

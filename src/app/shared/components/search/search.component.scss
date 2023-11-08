@@ -39,3 +39,9 @@
   background-color: #407772d1;
   box-shadow:none !important;
 }
+
+@media (max-width: 425px){
+.input-group {
+  width: 100%;
+ }
+}

@@ -19,7 +19,6 @@ header {
   align-items: center;
   height: 80px;
   position: fixed;
-  // top: 0;
   background-color:rgb(15 58 64);
   @include padding-grid(0, 60px, 0, 60px);
   z-index:1;
@@ -35,23 +34,31 @@ header {
   display: inline-block;
   align-items: baseline;
   padding-left: 15px;
-
 }
 
 .menu-container a {
   color: #b6d540;
 }
 
-// .menu-container .menu .login-button {
-//   border-radius: 20px;
-//   height: 35px;
-//   width: 120px;
-//   text-align: center;
-// }
+@media (max-width: 425px){
+  .menu-container .menu {
+    width: 100%;
+    height: 100px;
+    justify-content: space-around;
+    @include padding-grid(20px, 40px, 20px, 40px);
+  }
 
-// .menu-container.menu .login-button:hover {
-//   border: solid 2px #eba4a9;
-//   color: #000000;
-//   cursor: pointer;
-//   font-weight: bold;
-// }
+  .menu-container img {
+    width: 90%;
+  }
+  .menu-container .menu .main-menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: justify;
+  }
+
+  .menu-container a {
+    font-size:  0.9rem
+  }
+}
