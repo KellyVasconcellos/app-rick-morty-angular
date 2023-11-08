@@ -1,8 +1,8 @@
-main{
+main {
   display: 100%;
 }
 
-.search-section{
+.search-section {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -24,12 +24,11 @@ main{
 }
 
 @media (max-width: 768px) {
-
-  .search-section{
+  .search-section {
     margin-top: 100px;
   }
 
-  .body-section{
+  .body-section {
     display: flex;
     align-items: center;
     justify-content: center;
