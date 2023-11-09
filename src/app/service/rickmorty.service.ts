@@ -14,8 +14,8 @@ export class RickmortyService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  getCharacters() {
-    return this.http.get<Character>(`${this.url}/character`)
+  getCharacters(apiUrl: string = `${this.url}/character`) {
+    return this.http.get<Character>(apiUrl)
   }
 
   getLocation() {

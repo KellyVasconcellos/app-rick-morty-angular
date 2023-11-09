@@ -1,26 +1,43 @@
-<section class="header-section">
+<!-- <section class="header-section">
   <app-header></app-header>
 </section>
 
 <main>
   <section class="search-section">
     <app-search></app-search>
-  </section>
+  </section> -->
 
-  <section class="body-section" *ngIf="character?.results">
-    <app-card *ngFor="let item of character.results" [results]="item"></app-card>
-  </section>
-</main>
+
+  <section infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="2" [infiniteScrollThrottle]="50"
+  (scrolled)="onScroll()" (scrolledUp)="onScrollUp()">
+
+  <!-- <ng-container *ngIf="character.length > 0 else message">
+    <div class="container_item" *ngFor="let character of character; trackby: trackByCharacterId">
+      <p>Name: {{character.name}}</p>
+      <p>Status: <span>{{character.status}}</span></p>
+    </div>
+  </ng-container>
+
+  <ng-template #message>
+    <p>La lista está vacía</p>
+  </ng-template> -->
+
+
+
+  <ng-container class="body-section"  *ngIf="character.length > 0 else message">
+    <app-card *ngFor="let item of character; trackby: trackByCharacterId" [results]="item"></app-card>
+  </ng-container>
+
+  <ng-template #message>
+    <p>La lista está vacía</p>
+  </ng-template>
+
+</section>
+
+
+<!-- </main>
 
 <section>
   <app-footer></app-footer>
-</section>
+</section> -->
 
-<div
-      class="search-results"
-      infiniteScroll
-      [infiniteScrollDistance]="2"
-      [infiniteScrollThrottle]="50"
-      (scrolled)="onScroll()"
-      [scrollWindow]="false"
-    ></div>
