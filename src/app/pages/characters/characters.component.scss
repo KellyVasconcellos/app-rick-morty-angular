@@ -18,9 +18,9 @@ main {
   width: 100%;
   display: flex;
   padding: 220px 100px 50px 100px;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 50px;
+  justify-content: center;
+  gap: 25px;
 }
 
 @media (max-width: 768px) {

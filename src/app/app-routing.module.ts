@@ -5,7 +5,17 @@ import { CharactersComponent } from './pages/characters/characters.component';
 const routes: Routes = [
   {
     path: '',
-    component: CharactersComponent
+    component: CharactersComponent,
+    children: [
+      {
+        path: 'episode',
+        component: CharactersComponent,
+      },
+      {
+        path: 'location',
+        component: CharactersComponent,
+      }
+    ]
   },
 
 ];
