@@ -24,6 +24,15 @@ main {
 }
 
 @media (max-width: 768px) {
+  .body-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 250px;
+  }
+}
+
+@media (max-width: 425px) {
   .search-section {
     margin-top: 100px;
   }
