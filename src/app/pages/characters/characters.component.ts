@@ -40,7 +40,7 @@ export class CharactersComponent implements OnInit {
 
 
   onScrollUp() {
-    alert('Llegaste al inicio')
+    console.log('Llegaste al inicio')
   }
 
 
