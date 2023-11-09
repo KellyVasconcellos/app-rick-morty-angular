@@ -7,7 +7,7 @@
     <app-search></app-search>
   </section>
 
-  <section class="body-section">
+  <section class="body-section" *ngIf="character?.results">
     <app-card *ngFor="let item of character.results" [results]="item"></app-card>
   </section>
 </main>
