@@ -15,3 +15,12 @@
 <section>
   <app-footer></app-footer>
 </section>
+
+<div
+      class="search-results"
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()"
+      [scrollWindow]="false"
+    ></div>

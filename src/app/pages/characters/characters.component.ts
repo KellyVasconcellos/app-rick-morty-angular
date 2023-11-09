@@ -25,4 +25,8 @@ export class CharactersComponent implements OnInit {
         console.log(this.character);
       });
   }
+
+  onScroll() {
+    console.log("scrolled!!");
+  }
 }
