@@ -15,10 +15,10 @@
     (scrolled)="onScroll()"
     (scrolledUp)="onScrollUp()"
   >
-    <ng-container *ngIf="character.length > 0; else message">
+    <ng-container *ngIf="character.results.length > 0; else message">
       <section class="body-section">
         <app-card
-          *ngFor="let item of character; trackby: trackByCharacterId"
+          *ngFor="let item of character.results; trackby: trackByCharacterId"
           [results]="item"
         ></app-card>
       </section>
