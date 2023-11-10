@@ -18,11 +18,11 @@ export class RickmortyService {
     return this.http.get<Character>(apiUrl)
   }
 
-  getLocation() {
-    return this.http.get<Array<Location>>(`${this.url}/location`)
+  getLocation(apiUrl: string = `${this.url}/location`) {
+    return this.http.get<Location>(apiUrl)
   }
 
-  getEpisode() {
-    return this.http.get<Array<Episode>>(`${this.url}/episode`)
+  getEpisode(apiUrl: string = `${this.url}/episode`) {
+    return this.http.get<Episode>(apiUrl)
   }
 }

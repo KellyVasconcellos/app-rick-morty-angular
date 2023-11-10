@@ -2,6 +2,7 @@ import { Component, OnInit, TrackByFunction } from '@angular/core';
 import { Router } from '@angular/router';
 import { RickmortyService } from 'src/app/service/rickmorty.service';
 import { Character } from 'src/app/shared/interface/character';
+import { Episode } from 'src/app/shared/interface/episode';
 
 @Component({
   selector: 'app-characters',
@@ -12,8 +13,8 @@ import { Character } from 'src/app/shared/interface/character';
 export class CharactersComponent implements OnInit {
 
   character!: Character;
-  episode: Array<any> = [];
-  location: Array<any> = [];
+  episode!: Episode;
+  location!: Location;
 
   nextUrl: string = '';
 
@@ -22,8 +23,6 @@ export class CharactersComponent implements OnInit {
     private rickmortyService: RickmortyService,
     private router: Router
   ) {}
-
-
 
   ngOnInit(): void {
     //characters
@@ -35,19 +34,25 @@ export class CharactersComponent implements OnInit {
     });
   }
 
-  // //episode
-  // episodes(){
-  //   this.rickmortyService.getEpisode().subscribe({
-  //     next: (response) => {
-  //       this.character = response.results;
-  //       this.nextUrl = response.info.next;
-  //     }
-  //   })
-  // }
+  //episode
+  episodes(){
+    this.rickmortyService.getEpisode().subscribe({
+      next: (response) => {
+        this.character = response;
+        this.nextUrl = response.info.next;
+      }
+    })
+  }
 
-  // //location
-
-
+  //location
+  locations(){
+    this.rickmortyService.getLocation().subscribe({
+      next: (response) => {
+        this.character = response;
+        this.nextUrl = response.info.next;
+      }
+    })
+  }
 
   onScroll() {
     this.rickmortyService.getCharacters(this.nextUrl).subscribe({
@@ -62,13 +67,9 @@ export class CharactersComponent implements OnInit {
     });
   }
 
-
   onScrollUp() {
-    console.log('Llegaste al inicio')
+    console.log('')
   }
 
-
   trackByCharacterId: TrackByFunction<any> = (index: number, character: any) => character.id
-
-
 }
