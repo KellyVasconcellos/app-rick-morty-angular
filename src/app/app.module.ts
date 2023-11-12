@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { CommonModule } from '@angular/common';
 import { CharactersComponent } from './pages/characters/characters.component';
+import { TemplateComponent } from './pages/template/template.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CharactersComponent } from './pages/characters/characters.component';
     FooterComponent,
     SearchComponent,
     CharactersComponent,
+    TemplateComponent,
 
   ],
   imports: [
