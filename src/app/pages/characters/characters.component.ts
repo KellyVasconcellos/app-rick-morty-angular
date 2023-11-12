@@ -24,8 +24,10 @@ export class CharactersComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    //characters
+    this.characters()
+  }
 
+  characters(){
     this.rickmortyService.getCharacters().subscribe({
       next: (response) => {
         this.results = response.results;
@@ -66,12 +68,6 @@ export class CharactersComponent implements OnInit {
   }
 
   onScrollUp() {
-    this.rickmortyService.getCharacters().subscribe({
-      next: (response) => {
-        this.results = response.results;
-        this.nextUrl = response.info.next;
-      },
-    });
+    this.characters()
   }
-
 }

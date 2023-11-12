@@ -23,6 +23,11 @@ main {
   gap: 25px;
 }
 
+.search-results {
+  height: 20rem;
+  overflow: scroll;
+}
+
 @media (max-width: 768px) {
   .body-section {
     display: flex;
@@ -46,8 +51,3 @@ main {
 }
 
 
-
-.search-results {
-  height: 20rem;
-  overflow: scroll;
-}
