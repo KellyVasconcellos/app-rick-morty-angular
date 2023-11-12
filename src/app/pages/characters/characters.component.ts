@@ -15,8 +15,7 @@ export class CharactersComponent implements OnInit {
   nextUrl: string = '';
 
   constructor(
-    private rickmortyService: RickmortyService,
-
+    private rickmortyService: RickmortyService
   ) {}
 
   ngOnInit(): void {

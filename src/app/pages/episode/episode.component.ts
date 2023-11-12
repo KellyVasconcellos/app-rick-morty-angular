@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RickmortyService } from 'src/app/service/rickmorty.service';
 import { Character } from 'src/app/shared/interface/character';
 import { Results } from 'src/app/shared/interface/results';
@@ -8,7 +8,7 @@ import { Results } from 'src/app/shared/interface/results';
   templateUrl: './episode.component.html',
   styleUrls: ['./episode.component.scss']
 })
-export class EpisodeComponent {
+export class EpisodeComponent implements OnInit  {
   character!: Character;
   results: Array<Results> = []
 
@@ -25,7 +25,7 @@ export class EpisodeComponent {
   episodes() {
     this.rickmortyService.getEpisode().subscribe({
       next: (response) => {
-        this.character = response;
+        this.results = response.results;
         this.nextUrl = response.info.next;
       },
     });

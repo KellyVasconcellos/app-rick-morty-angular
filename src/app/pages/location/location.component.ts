@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RickmortyService } from 'src/app/service/rickmorty.service';
 import { Character } from 'src/app/shared/interface/character';
 import { Results } from 'src/app/shared/interface/results';
@@ -8,14 +8,14 @@ import { Results } from 'src/app/shared/interface/results';
   templateUrl: './location.component.html',
   styleUrls: ['./location.component.scss']
 })
-export class LocationComponent {
+export class LocationComponent implements OnInit  {
   character!: Character;
   results: Array<Results> = []
 
   nextUrl: string = '';
 
   constructor(
-    private rickmortyService: RickmortyService,
+    private rickmortyService: RickmortyService
   ) {}
 
   ngOnInit(): void {
@@ -25,7 +25,7 @@ export class LocationComponent {
   locations() {
     this.rickmortyService.getLocation().subscribe({
       next: (response) => {
-        this.character = response;
+        this.results = response.results;
         this.nextUrl = response.info.next;
       },
     });
