@@ -2,8 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Character } from '../shared/interface/character';
-import { Episode } from '../shared/interface/episode';
-import { Location } from '../shared/interface/location';
 
 @Injectable({
   providedIn: 'root'
@@ -19,10 +17,10 @@ export class RickmortyService {
   }
 
   getLocation(apiUrl: string = `${this.url}/location`) {
-    return this.http.get<Location>(apiUrl)
+    return this.http.get<Character>(apiUrl)
   }
 
   getEpisode(apiUrl: string = `${this.url}/episode`) {
-    return this.http.get<Episode>(apiUrl)
+    return this.http.get<Character>(apiUrl)
   }
 }

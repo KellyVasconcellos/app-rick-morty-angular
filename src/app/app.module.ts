@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CardComponent } from './shared/components/card/card.component';
-import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { SearchComponent } from './shared/components/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,16 +12,19 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { CommonModule } from '@angular/common';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { TemplateComponent } from './pages/template/template.component';
+import { EpisodeComponent } from './pages/episode/episode.component';
+import { LocationComponent } from './pages/location/location.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    HeaderComponent,
     FooterComponent,
     SearchComponent,
     CharactersComponent,
     TemplateComponent,
+    EpisodeComponent,
+    LocationComponent,
 
   ],
   imports: [
