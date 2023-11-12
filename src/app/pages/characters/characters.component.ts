@@ -9,15 +9,12 @@ import { Episode } from 'src/app/shared/interface/episode';
   templateUrl: './characters.component.html',
   styleUrls: ['./characters.component.scss'],
 })
-
 export class CharactersComponent implements OnInit {
-
   character!: Character;
   episode!: Episode;
   location!: Location;
 
   nextUrl: string = '';
-
 
   constructor(
     private rickmortyService: RickmortyService,
@@ -35,41 +32,45 @@ export class CharactersComponent implements OnInit {
   }
 
   //episode
-  episodes(){
+  episodes() {
     this.rickmortyService.getEpisode().subscribe({
       next: (response) => {
         this.character = response;
         this.nextUrl = response.info.next;
-      }
-    })
+      },
+    });
   }
 
   //location
-  locations(){
+  locations() {
     this.rickmortyService.getLocation().subscribe({
       next: (response) => {
         this.character = response;
         this.nextUrl = response.info.next;
-      }
-    })
+      },
+    });
   }
 
   onScroll() {
     this.rickmortyService.getCharacters(this.nextUrl).subscribe({
       next: (response) => {
-        if (response.info.next && response.info.next !== null) {
-          this.nextUrl = response.info.next;
-          Array.from(response.results).forEach((element) => {
-            this.character.results = [...this.character.results, element];
-          });
-        }
+        this.nextUrl = response.info.next;
+        this.character.results = this.character.results.concat(
+          response.results
+        );
       },
     });
   }
 
   onScrollUp() {
-    console.log('')
+    this.rickmortyService.getCharacters().subscribe({
+      next: (response) => {
+        this.character = response;
+        this.nextUrl = response.info.next;
+      },
+    });
   }
 
-  trackByCharacterId: TrackByFunction<any> = (index: number, character: any) => character.id
+  trackByCharacterId: TrackByFunction<any> = (index: number, character: any) =>
+    character.id;
 }

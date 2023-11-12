@@ -1,6 +1,6 @@
 <section class="header-section">
   <app-header></app-header>
-  <a href="" (click)="locations()"></a>
+  <a href="" (click)="locations()">oiiuiu</a>
 </section>
 
 <main>
@@ -16,7 +16,7 @@
     (scrolled)="onScroll()"
     (scrolledUp)="onScrollUp()"
   >
-    <ng-container *ngIf="character.results.length > 0; else message">
+    <ng-container *ngIf="character.results.length > 0">
       <section class="body-section">
         <app-card
           *ngFor="let item of character.results; trackby: trackByCharacterId"
@@ -24,8 +24,6 @@
         ></app-card>
       </section>
     </ng-container>
-
-    <ng-template #message> </ng-template>
   </div>
 </main>
 
