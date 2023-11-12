@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { RickmortyService } from 'src/app/service/rickmorty.service';
 import { Character } from 'src/app/shared/interface/character';
 import { Episode } from 'src/app/shared/interface/episode';
+import { Results } from 'src/app/shared/interface/results';
 
 @Component({
   selector: 'app-characters',
@@ -13,6 +14,7 @@ export class CharactersComponent implements OnInit {
   character!: Character;
   episode!: Episode;
   location!: Location;
+  results: Array<Results> = []
 
   nextUrl: string = '';
 
@@ -23,9 +25,10 @@ export class CharactersComponent implements OnInit {
 
   ngOnInit(): void {
     //characters
+
     this.rickmortyService.getCharacters().subscribe({
       next: (response) => {
-        this.character = response;
+        this.results = response.results;
         this.nextUrl = response.info.next;
       },
     });
@@ -55,7 +58,7 @@ export class CharactersComponent implements OnInit {
     this.rickmortyService.getCharacters(this.nextUrl).subscribe({
       next: (response) => {
         this.nextUrl = response.info.next;
-        this.character.results = this.character.results.concat(
+        this.results = this.results.concat(
           response.results
         );
       },
@@ -65,12 +68,10 @@ export class CharactersComponent implements OnInit {
   onScrollUp() {
     this.rickmortyService.getCharacters().subscribe({
       next: (response) => {
-        this.character = response;
+        this.results = response.results;
         this.nextUrl = response.info.next;
       },
     });
   }
 
-  trackByCharacterId: TrackByFunction<any> = (index: number, character: any) =>
-    character.id;
 }
