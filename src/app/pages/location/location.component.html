@@ -12,10 +12,11 @@
     (scrolledUp)="onScrollUp()"
   >
     <section class="body-section" *ngIf="results.length > 0">
-      <app-card
+      <app-card-location
         *ngFor="let item of results"
+        [url]="item.location.url"
         [results]="item"
-      ></app-card>
+      ></app-card-location>
     </section>
   </div>
 </main>

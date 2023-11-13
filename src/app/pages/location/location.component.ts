@@ -23,7 +23,7 @@ export class LocationComponent implements OnInit  {
   }
 
   locations() {
-    this.rickmortyService.getLocation().subscribe({
+    this.rickmortyService.getCharacters().subscribe({
       next: (response) => {
         this.results = response.results;
         this.nextUrl = response.info.next;
@@ -32,7 +32,7 @@ export class LocationComponent implements OnInit  {
   }
 
   onScroll() {
-    this.rickmortyService.getLocation(this.nextUrl).subscribe({
+    this.rickmortyService.getCharacters(this.nextUrl).subscribe({
       next: (response) => {
         this.nextUrl = response.info.next;
         this.results = this.results.concat(
