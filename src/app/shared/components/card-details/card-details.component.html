@@ -1,10 +1,12 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem;" *ngIf="results">
   <img src="{{results.image}}" class="card-img-top" alt="...">
   <div class="card-body">
     <p class="card-text">Name: {{results.name}}</p>
     <p class="card-text">Status: {{results.status}}</p>
     <p class="card-text">Specie: {{results.species}}</p>
+    <p class="card-text">Type: {{results.type}}</p>
     <p class="card-text">Gender: {{results.gender}}</p>
+    <p class="card-text">Origin: {{results.origin.name}}</p>
+    <p class="card-text">Location: {{results.location.name}}</p>
   </div>
-
 </div>

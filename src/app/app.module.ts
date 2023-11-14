@@ -13,6 +13,8 @@ import { CommonModule } from '@angular/common';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { TemplateComponent } from './pages/template/template.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CardDetailsComponent } from './shared/components/card-details/card-details.component';
+import { DetailsComponent } from './pages/details/details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     SearchComponent,
     CharactersComponent,
-    TemplateComponent
+    TemplateComponent,
+    CardDetailsComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

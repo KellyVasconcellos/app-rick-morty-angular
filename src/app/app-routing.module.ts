@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { TemplateComponent } from './pages/template/template.component';
+import { DetailsComponent } from './pages/details/details.component';
 
 const routes: Routes = [
   {
@@ -15,10 +16,13 @@ const routes: Routes = [
       {
         path: 'character',
         component: CharactersComponent,
+      },
+      {
+        path: 'details/:id',
+        component: DetailsComponent,
       }
     ]
-  },
-
+  }
 ];
 
 @NgModule({

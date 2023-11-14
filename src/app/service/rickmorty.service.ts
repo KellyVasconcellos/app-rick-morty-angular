@@ -19,4 +19,8 @@ export class RickmortyService {
   getCharacters(apiUrl: string = `${this.url}/character`) {
     return this.http.get<Character>(apiUrl)
   }
+
+  getDetailsIdCard(id:number) {
+    return this.http.get<Results>(`${this.url}/character/${id}`)
+  }
 }
