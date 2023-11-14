@@ -12,6 +12,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { CommonModule } from '@angular/common';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { TemplateComponent } from './pages/template/template.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { TemplateComponent } from './pages/template/template.component';
     HttpClientModule,
     CommonModule,
     InfiniteScrollModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
