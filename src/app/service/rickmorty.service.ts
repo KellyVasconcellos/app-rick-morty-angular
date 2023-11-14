@@ -15,8 +15,4 @@ export class RickmortyService {
   getCharacters(apiUrl: string = `${this.url}/character`) {
     return this.http.get<Character>(apiUrl)
   }
-
-  getLocation(apiUrl: string = `${this.url}/location`) {
-    return this.http.get<any>(apiUrl)
-  }
 }

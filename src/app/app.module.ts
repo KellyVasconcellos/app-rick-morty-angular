@@ -12,8 +12,6 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { CommonModule } from '@angular/common';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { TemplateComponent } from './pages/template/template.component';
-import { LocationComponent } from './pages/location/location.component';
-import { CardLocationComponent } from './shared/components/card-location/card-location.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +20,7 @@ import { CardLocationComponent } from './shared/components/card-location/card-lo
     FooterComponent,
     SearchComponent,
     CharactersComponent,
-    TemplateComponent,
-    LocationComponent,
-    CardLocationComponent,
-
+    TemplateComponent
   ],
   imports: [
     BrowserModule,
