@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Results } from '../../interface/results';
 import { RickmortyService } from 'src/app/service/rickmorty.service';
 import { Locationn } from '../../interface/location';
