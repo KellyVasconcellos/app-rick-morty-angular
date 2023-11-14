@@ -1,4 +1,5 @@
-import { Component, OnInit, TrackByFunction } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { RickmortyService } from 'src/app/service/rickmorty.service';
 import { Character } from 'src/app/shared/interface/character';
 import { Results } from 'src/app/shared/interface/results';
@@ -19,13 +20,17 @@ export class CharactersComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.rickmortyService.subjectResult.subscribe(value => {
+      this.results = value.results
+      this.nextUrl = value.info.next
+    })
     this.characters()
   }
 
-  characters(){
+  characters() {
     this.rickmortyService.getCharacters().subscribe({
       next: (response) => {
-        this.results = response.results;
+        this.rickmortyService.subjectResult.next(response)
         this.nextUrl = response.info.next;
       },
     });

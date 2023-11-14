@@ -11,7 +11,7 @@
     (scrolled)="onScroll()"
     (scrolledUp)="onScrollUp()"
   >
-    <section class="body-section" *ngIf="results.length > 0">
+    <section class="body-section">
       <app-card
         *ngFor="let item of results"
         [results]="item"

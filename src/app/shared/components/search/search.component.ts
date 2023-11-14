@@ -28,9 +28,8 @@ export class SearchComponent implements OnInit {
       switchMap(value => this.rickmortyService.getCharacters(
         `${this.url}?name=${value}`
         )),
-      tap((res: any) => this.total = res.total),
-      map((res: any) => res.results)
-    ).subscribe(console.log)
+      map((res: any) => res)
+    ).subscribe(res => this.rickmortyService.subjectResult.next(res))
   }
 
 
