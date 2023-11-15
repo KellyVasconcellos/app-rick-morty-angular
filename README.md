@@ -1,27 +1,51 @@
-# AppRickMorty
+# Consumo de API Rick e Morty
+<h1>
+    <img src="public/imagem1.png">
+    <img src="public/imagem2.png">
+    <img src="public/imagem3.png">
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+# Indice
 
-## Development server
+- [Sobre](#-sobre)
+- [Tecnologias utilizadas](#-tecnologias-utilizadas)
+- [Como baixar o projeto](#-como-baixar-o-projeto)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🔖&nbsp; Sobre
+Aplicação web consumindo [API Rick and Morty](https://rickandmortyapi.com/) com Angular.
+Aplicação possui duas páginas, sendo uma para listagem com todos os personagens (scroll infinito) e outra para o detalhe do card.
+Na página inicial foi construído barra de pesquisa onde é possível buscar pelo nome do personagem, ao clicar no personagem será direcionado para outra página com informações adicionais de características.
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🚀 Tecnologias utilizadas
 
-## Build
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Angular](https://angular.io/)
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🗂 Como baixar o projeto
 
-## Running end-to-end tests
+```bash
+    # Clonar o repositório
+    $ git clone https://github.com/KellyVasconcellos/app-rick-morty.git
+    # Entrar no diretório
+    $ cd app-rick-morty
+    # Instalar as dependencias
+    $ npm install
+    # Inicializar o projeto
+    $ npm start
+    # Abrir no navegador com este endereço
+    $ `http://localhost:4200/`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Desenvolvido 💜 por Kelly Vasconcellos
