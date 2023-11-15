@@ -1,8 +1,8 @@
 # Consumo de API Rick e Morty
 <h1>
-    <img src="public/imagem1.png">
-    <img src="public/imagem2.png">
-    <img src="public/imagem3.png">
+    <img src="public/imagem_1.png">
+    <img src="public/imagem_2.png">
+    <img src="public/imagem_3.png ">
 </h1>
 
 # Indice
