@@ -42,7 +42,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
     # Inicializar o projeto
     $ npm start
     # Abrir no navegador com este endereço
-    $ `http://localhost:4200/`
+    $ http://localhost:4200/
 
 ```
 
